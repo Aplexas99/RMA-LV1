@@ -1,3 +1,5 @@
+package Models
+
 class Player {
     val id: Int
     val name: String
@@ -6,8 +8,8 @@ class Player {
     constructor(id: Int, name:String){
         this.id=id;
         this.name=name;
-        val d1 = Die(); val d2=Die() ; val d3=Die() ;
-        val d4=Die(); val d5=Die() ; val d6=Die();
+        val d1 = Die(); val d2= Die() ; val d3= Die() ;
+        val d4= Die(); val d5= Die() ; val d6= Die();
         this.dice= mutableListOf(d1,d2,d3,d4,d5,d6)
     }
     fun rollDice(){
@@ -22,4 +24,5 @@ class Player {
         }
         println()
     }
+
 }

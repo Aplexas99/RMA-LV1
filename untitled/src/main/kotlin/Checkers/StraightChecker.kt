@@ -1,4 +1,8 @@
-class StraightChecker(): Checker{
+package Checkers
+
+import Models.Die
+
+class StraightChecker(): Checker {
     override fun check(dice: MutableList<Die>) {
         val sortedDice : MutableList<Int> = mutableListOf<Int>()
         for (index in 0..dice.size-1){

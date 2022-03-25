@@ -1,3 +1,5 @@
+package Models
+
 import kotlin.random.Random
 
 class Die{

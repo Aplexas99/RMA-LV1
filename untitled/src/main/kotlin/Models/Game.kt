@@ -1,3 +1,7 @@
+package Models
+
+import Checkers.Checker
+
 class Game
 {
     val players : MutableList<Player>
@@ -26,12 +30,12 @@ class Game
                     gameEnd= true;
                 }
                 else{
-                    playerOnTurn++
+                    endTurn()
                 }
             }
         }
         else{
-            println("Game ended")
+            println("Models.Game ended")
         }
     }
 
@@ -51,6 +55,15 @@ class Game
     }
 
     fun endTurn(){
+
         playerOnTurn++
+        if (playerOnTurn >=players.size){
+            gameEnd=true
+        }
+        numberOfThrows=0
+    }
+
+    fun getPlayerOnTurnName(): String{
+        return players[playerOnTurn].name
     }
 }
