@@ -49,4 +49,8 @@ class Game
             checkers[index].check(players[playerOnTurn].dice)
         }
     }
+
+    fun endTurn(){
+        playerOnTurn++
+    }
 }

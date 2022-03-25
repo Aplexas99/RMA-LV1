@@ -12,7 +12,7 @@ fun main(args: Array<String>) {
     val game = Game(players,checkers)
     while (!game.gameEnd) {
         var position : String
-        println("Type 'r' for throwing dice,'l' for locking ")
+        println("Type 'r' for throwing dice,'l' for locking,'e' to end your turn")
         var option = readLine()
         when (option){
             "r" -> game.throwDice()
@@ -21,7 +21,7 @@ fun main(args: Array<String>) {
                 position=readLine().toString()
                 game.lockDice(position.toInt())
             }
-            "r" -> game.throwDice()
+            "e" -> game.endTurn()
             "r" -> game.throwDice()
         }
 
